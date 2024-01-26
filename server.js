@@ -16,7 +16,7 @@ const nodePorts = {
 const network = process.env.HSD_NETWORK || 'main'
 const nodeClient = new NodeClient({
   host: process.env.HSD_HTTP_HOST,
-  port: process.env.HSD_HTTP_PORT || nodePorts[network],
+  port: parseInt(process.env.HSD_HTTP_PORT) || nodePorts[network],
   apiKey: process.env.HSD_API_KEY,
 });
 
