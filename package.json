@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "name": "sdane-proofs",
+  "description": "Serves proofs required for Stateless DANE.",
+  "version": "0.0.0",
+  "homepage": "https://github.com/htools-org/sdane-proofs",
+  "license": "MIT",
+  "main": "./server.js",
+  "bugs": {
+    "url": "https://github.com/htools-org/sdane-proofs/issues"
+  },
+  "author": {
+    "name": "Rithvik Vibhu",
+    "url": "https://github.com/rithvikvibhu",
+    "email": "rithvikvibhu@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/htools-org/sdane-proofs.git"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "hs-client": "^6.0.0",
+    "stateless-dane": "^0.0.2"
+  }
+}
