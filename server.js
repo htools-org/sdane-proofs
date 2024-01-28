@@ -37,9 +37,14 @@ app.get('/proofs/:domain', async (req, res) => {
     return res.status(400).json({ error: 'Bad domain.' })
   }
 
+  const port = parseInt(req.query.port, 10);
+
   const options = {
     // json object instead of hex encoded value
     parsed: req.query.parsed !== undefined,
+
+    // domain port for DNSSEC/TLSA
+    port: isNaN(port) ? 443 : port,
 
     // for delv (dnssec chain)
     resolverIP: process.env.SDANE_RESOLVER_IP,
@@ -49,7 +54,7 @@ app.get('/proofs/:domain', async (req, res) => {
   const dnssec = req.query.dnssec !== undefined
   const urkel = req.query.urkel !== undefined
 
-  console.log(domain, { dnssec, urkel, parsed: options.parsed });
+  console.log(domain, { dnssec, urkel, parsed: options.parsed, port: options.port });
 
   const promises = [];
   const proofs = {};

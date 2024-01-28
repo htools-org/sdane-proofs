@@ -4,11 +4,13 @@ const { StatelessDANECertificate } = require('stateless-dane')
  * @param {string} domain
  * @param {object} options
  * @param {boolean} options.parsed
+ * @param {number} options.port
  * @param {string} options.resolverIP
  * @param {number} options.resolverPort
  */
 async function getDnssecProof(nodeClient, domain, options = {}) {
   const cert = new StatelessDANECertificate(nodeClient, domain, {
+    port: options.port,
     resolverIP: options.resolverIP,
     resolverPort: options.resolverPort,
   })

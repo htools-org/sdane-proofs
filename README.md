@@ -17,6 +17,7 @@ Append query params as needed:
 - `dnssec` - include dnssec proof
 - `urkel` - include urkel tree proof
 - `parsed` - return json object instead of hex-encoded extension values
+- `port=NUM` - custom port (default: 443)
 
 Examples:
 
