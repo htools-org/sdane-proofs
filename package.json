@@ -24,6 +24,6 @@
     "express": "^4.18.2",
     "helmet": "^7.1.0",
     "hs-client": "^6.0.0",
-    "stateless-dane": "^0.0.5"
+    "stateless-dane": "^0.0.6"
   }
 }
