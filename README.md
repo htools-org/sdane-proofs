@@ -23,7 +23,7 @@ Examples:
 
 ```
 # Get both DNSSEC and Urkel proofs, in expanded form
-https://sdaneproofs.htools.work/proofs/letsdane?dnssec&urkel&parsed
+https://sdaneproofs.htools.work/proofs/lazydane?dnssec&urkel&parsed
 
 # Get only DNSSEC proof as hex-encoded HIP-17 extension value
 https://sdaneproofs.htools.work/proofs/collate?dnssec
